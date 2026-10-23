@@ -1,0 +1,7 @@
+# calkey.app
+User-agent: *
+Allow: /
+# The waitlist's confirmation page spends a one-time link; nothing to index there.
+Disallow: /confirm.html
+
+Sitemap: https://calkey.app/sitemap.xml
