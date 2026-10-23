@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calkey: contador de calorias e macros com IA, no seu idioma</title>
+<meta name="description" content="Escreva o que comeu em português, e o Calkey calcula calorias, proteína, carboidratos e gordura. Entende concha, escumadeira e xícara. Em breve no Android.">
+<link rel="canonical" href="https://calkey.app/pt/">
+<link rel="alternate" hreflang="en" href="https://calkey.app/">
+<link rel="alternate" hreflang="hi" href="https://calkey.app/hi/">
+<link rel="alternate" hreflang="pt-BR" href="https://calkey.app/pt/">
+<link rel="alternate" hreflang="id" href="https://calkey.app/id/">
+<link rel="alternate" hreflang="x-default" href="https://calkey.app/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Calkey">
+<meta property="og:title" content="Calkey: contador de calorias e macros com IA, no seu idioma"><meta property="og:description" content="Escreva o que comeu em português, e o Calkey calcula calorias, proteína, carboidratos e gordura. Entende concha, escumadeira e xícara. Em breve no Android.">
+<meta property="og:url" content="https://calkey.app/pt/"><meta property="og:image" content="https://calkey.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#EAE9EE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap"></noscript>
+<style>
+:root{--page:#EAE9EE;--page2:#E5E4EA;--float:#F8F7FB;--sunk:#DEDCE6;--panel:#FAE7C8;--ink:#090124;--soft:#47425E;--faint:#605A73;--rule:#D6D4DE;--accent:#5146D6;--wash:#DCD9FA;
+--night:#0E0A24;--display:"Fraunces",Georgia,serif;--sans:"Inter","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(80% 40% at 50% 0%,color-mix(in srgb,var(--wash) 70%,transparent),transparent 70%),linear-gradient(var(--page),var(--page2));color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--page) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:62px}.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font:600 23px/1 var(--display);letter-spacing:-.02em}
+.brand svg{width:28px;height:28px;border-radius:8px;box-shadow:0 0 0 1px var(--rule)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--page);text-decoration:none;font:600 15px var(--sans);border-radius:999px;padding:13px 24px;min-height:48px}
+nav .btn{margin-left:auto;min-height:40px;padding:9px 18px;font-size:14px}
+header{padding:64px 0 40px}.pill{display:inline-flex;gap:8px;align-items:center;background:var(--wash);color:var(--accent);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;margin-bottom:22px}
+h1{font:600 clamp(44px,8vw,88px)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 22px}h1 span{display:block;color:var(--accent)}
+:lang(hi) h1{font-family:"Noto Sans Devanagari",var(--sans);letter-spacing:0;line-height:1.15}
+.lede{font-size:19px;color:var(--soft);max-width:34em;margin:0 0 28px}.lede b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.chip{background:var(--float);border:1px solid var(--rule);border-radius:999px;padding:9px 16px;font-size:15px}.chip b{color:var(--accent);margin-left:8px;font-variant-numeric:tabular-nums}
+section{padding:56px 0}h2{font:600 clamp(30px,4.6vw,46px)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 24px}:lang(hi) h2{font-family:"Noto Sans Devanagari",var(--sans);letter-spacing:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--float);border:1px solid var(--rule);border-radius:22px;padding:22px}
+.card b{display:block;font:600 19px/1.3 var(--display);margin-bottom:6px}:lang(hi) .card b{font-family:"Noto Sans Devanagari",var(--sans)}.card span{color:var(--soft);font-size:15.5px}
+.guide{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.guide a{display:flex;justify-content:space-between;gap:10px;background:var(--float);border:1px solid var(--rule);border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.guide a i{font-style:normal;color:var(--accent);font-weight:600;white-space:nowrap}
+details{border-bottom:1px solid var(--rule);padding:16px 0;max-width:780px}summary{font:600 18px var(--sans);cursor:pointer}details p{color:var(--soft);margin:8px 0 0}
+.end{background:var(--night);color:#F5EBDD;border-radius:30px;padding:40px 32px;text-align:center}.end h2{color:#F5EBDD}.end p{color:#CBC3D9;margin:0 auto 24px;max-width:30em}.end .btn{background:#B9B4F2;color:#090124}
+footer{border-top:1px solid var(--rule);padding:28px 0 44px;color:var(--faint);font-size:14px}footer .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between}footer a{color:var(--soft)}
+.langs a{margin-right:12px}
+@media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media (max-width:560px){.grid{grid-template-columns:1fr}header{padding:44px 0 28px}.lede{font-size:17px}}
+@media (prefers-color-scheme:dark){:root{--page:#0E0A24;--page2:#0B081E;--float:#1A1538;--sunk:#251F48;--ink:#F5EBDD;--soft:#CBC3D9;--faint:#9C94B2;--rule:#2C2652;--accent:#B9B4F2;--wash:#2E2760;--night:#1A1538;color-scheme:dark}.btn{background:#B9B4F2;color:#090124}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://calkey.app/pt/", "url": "https://calkey.app/pt/", "name": "Calkey: contador de calorias e macros com IA, no seu idioma", "description": "Escreva o que comeu em português, e o Calkey calcula calorias, proteína, carboidratos e gordura. Entende concha, escumadeira e xícara. Em breve no Android.", "inLanguage": "pt-BR", "isPartOf": {"@id": "https://calkey.app/#website"}, "about": {"@id": "https://calkey.app/#app"}}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mark" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="#EFE7D8"/><path fill="#090124" d="M62.213,29.734 A25,25 0 1 0 62.213,78.266 A1.3,1.3 0 0 0 63.2,77.004 L63.2,68.333 A1.3,1.3 0 0 0 61.42,67.125 A14.125,14.125 0 1 1 61.42,40.875 A1.3,1.3 0 0 0 63.2,39.667 L63.2,30.996 A1.3,1.3 0 0 0 62.213,29.734 Z"/><path fill="#5D51E1" d="M69.394,38.222 H72.231 A1.3,1.3 0 0 1 73.531,39.522 V68.478 A1.3,1.3 0 0 1 72.231,69.778 H69.394 A1.3,1.3 0 0 1 68.094,68.478 V39.522 A1.3,1.3 0 0 1 69.394,38.222 Z"/></symbol></svg>
+<nav><div class="wrap"><a class="brand" href="/pt/" aria-label="Calkey"><svg aria-hidden="true"><use href="#mark"/></svg>calkey</a><a class="btn" href="/?ref=pt#join-top">Entrar na lista de espera</a></div></nav>
+<header><div class="wrap">
+  <span class="pill">Acesso antecipado no Android. Entre na lista de espera.</span>
+  <h1>Escreva o que<span>você comeu.</span></h1>
+  <p class="lede">Escreva uma frase, como numa mensagem: <b>arroz, feijão e um filé de frango</b>, <b>dois ovos fritos</b>. O Calkey calcula calorias e macros em segundos. Sem código de barras, sem balança, sem procurar em banco de dados.</p>
+  <a class="btn" href="/?ref=pt#join-top">Entrar na lista de espera</a>
+  <div class="chips" aria-label="Quantas calorias?"><span class="chip">arroz e feijão<b>195 kcal</b></span><span class="chip">1 filé de frango grelhado<b>200 kcal</b></span><span class="chip">2 ovos fritos<b>220 kcal</b></span></div>
+</div></header>
+<section><div class="wrap"><h2>Feito para o dia a dia</h2><div class="grid"><div class="card"><b>Escreva ou fale</b><span>Em português, espanhol, inglês ou muitos outros idiomas. Toque no microfone e diga o que comeu.</span></div><div class="card"><b>Suas medidas</b><span>Uma concha de feijão é cerca de 100 g, uma escumadeira de arroz 90 g, uma xícara 200 ml. O Calkey entende medidas caseiras.</span></div><div class="card"><b>Corrija em dois toques</b><span>Cada número é uma estimativa. Escolha ½ ou 2×, e o Calkey lembra da correção na próxima vez.</span></div><div class="card"><b>De olho na proteína</b><span>Metas diárias de calorias, proteína, carboidratos e gordura a partir do seu corpo e do seu objetivo.</span></div><div class="card"><b>Água e peso</b><span>Um copo de água com um toque, e o gráfico do seu peso.</span></div><div class="card"><b>Com uma dupla</b><span>Compartilhe os totais de hoje com uma pessoa. Ela nunca vê o que você comeu.</span></div></div></div></section>
+<section><div class="wrap"><h2>Quantas calorias?</h2><p>Comidas do dia a dia, na medida em que você come:</p><div class="guide"><a href="/calorias/arroz-branco/"><span>Arroz, 1 escumadeira</span><i>115 kcal</i></a><a href="/calorias/feijao-carioca/"><span>Feijão, 1 concha</span><i>80 kcal</i></a><a href="/calorias/frango-grelhado/"><span>Frango grelhado, 1 filé</span><i>200 kcal</i></a><a href="/calorias/picanha/"><span>Picanha, 2 fatias</span><i>290 kcal</i></a><a href="/calorias/ovo-frito/"><span>Ovo frito</span><i>110 kcal</i></a></div></div></section>
+<section><div class="wrap"><h2>Perguntas</h2><details><summary>Quando sai?</summary><p>Primeiro no Android, em breve. Todo mundo na lista de espera recebe um convite antes do lançamento público, na ordem em que entrou.</p></details><details><summary>O app está em português?</summary><p>Sim. O app está em português, inglês, espanhol, hindi, indonésio e alemão, e você pode escrever a comida em qualquer idioma, até misturando.</p></details><details><summary>Preciso pesar a comida?</summary><p>Não. Escreva &quot;uma concha&quot;, &quot;duas fatias&quot;, como você falaria. Se souber o peso, escreva, e o Calkey faz a conta exata.</p></details><details><summary>É aconselhamento médico?</summary><p>Não. O Calkey dá estimativas para ajudar você a acompanhar o que come. Para orientação médica, fale com um médico ou nutricionista.</p></details></div></section>
+<section><div class="wrap"><div class="end"><h2>Garanta seu lugar.</h2><p>Quem entra na lista de espera ganha um desconto surpresa no primeiro mês, revelado no lançamento.</p><a class="btn" href="/?ref=pt#join-top">Entrar na lista de espera</a></div></div></section>
+<footer><div class="wrap"><span>© 2026 Interludeapps · Estimativas, não aconselhamento médico · <a href="/calories/">Guia de calorias</a> · <a href="/privacy.html">Privacidade</a> · <a href="/delete-account.html">Excluir conta</a></span><span class="langs"><a href="/" hreflang="en" lang="en">English</a> <a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a> <a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></span></div></footer>
+</body>
+</html>
