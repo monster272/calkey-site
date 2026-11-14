@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calkey: AI calorie &amp; macro tracker — write what you ate</title>
-<meta name="description" content="Track calories, protein, carbs and fat by typing what you ate, in your own language. Calkey knows your country's cups and bowls. Early access on Android.">
+<meta name="description" content="Track calories, protein, carbs and fat by typing what you ate, in your own language. Calkey knows your country's cups and bowls. Now on Google Play for Android.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <!-- One address for search engines: the same page is also served at interludeapps.store/calkey/. -->
 <link rel="canonical" href="https://calkey.app/">
@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Calkey">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Calkey: AI calorie & macro tracker — write what you ate">
-<meta property="og:description" content="One sentence, any language, your country's cups and bowls. Share today with one person. Early access on Android.">
+<meta property="og:description" content="One sentence, any language, your country's cups and bowls. Share today with one person. Now on Google Play for Android.">
 <meta property="og:url" content="https://calkey.app/">
 <meta property="og:image" content="https://calkey.app/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <meta property="og:image:alt" content="Calkey: write what you ate, in any language. A journal with three meals and 440 calories left.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Calkey: AI calorie & macro tracker">
-<meta name="twitter:description" content="Log calories and macros by typing what you ate, in your own language. Early access on Android.">
+<meta name="twitter:description" content="Log calories and macros by typing what you ate, in your own language. Now on Google Play for Android.">
 <meta name="twitter:image" content="https://calkey.app/og-image.png">
 <meta name="theme-color" content="#F4F4F1">
 <meta name="application-name" content="Calkey">
@@ -425,9 +425,8 @@ h2 em{font-style:normal;color:var(--a)}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 /* The hero is there in the first paint, not after the script: it is what a phone measures the page by. */
 .hero .rv{opacity:1;transform:none;transition:none}
-/* room for the waitlist form before the script mounts it, so the phone beside it never jumps */
-[data-join]:empty{min-height:265px}
-@media (max-width:640px){ [data-join]:empty{min-height:399px} }
+.getit{display:flex;flex-direction:column;gap:10px;align-items:flex-start}.final .getit{align-items:center}
+.getit .fine{margin:0}
 
 /* ========================================================= 01 · partner */
 .partner{background:radial-gradient(120% 60% at 80% 0%,color-mix(in srgb,var(--as) 70%,transparent),transparent 60%),var(--night)}
@@ -866,20 +865,20 @@ footer .brand svg{width:24px;height:24px;border-radius:7px}
 <nav data-nav><div class="wrap">
   <a class="brand" href="#top" aria-label="Calkey, home"><svg><use href="#mark"/></svg>calkey</a>
   <div class="links"><a href="#partner">Partner</a><a href="#country">Your measures</a><a href="#features">Features</a><a href="#colours">Colours</a><a href="#faq">FAQ</a></div>
-  <a class="btn" href="#join-top">Join the waitlist</a>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dnav">Get it on Google Play</a>
 </div></nav>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="pill rv"><span class="dot"></span><span data-pill>Early access on Android. Join the waitlist.</span></div>
+      <div class="pill rv"><span class="dot"></span><span>Now on Google Play for Android.</span></div>
       <h1 class="rv d1">Write what<br>you ate.<span class="l2">In <span class="lang" data-lang><span>English</span></span>.</span></h1>
       <p class="lede rv d2">Calkey turns one sentence into calories and macros. Type it the way you'd text a friend, <b>2 eggs and a latte</b>, <b>dos tacos al pastor</b>, <b>2 roti, dal tadka</b>, and the numbers land in seconds. No barcode, no scale, no database.</p>
       <div class="ios-nudge" data-ios-nudge hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
-        <span>Looks like you're on an iPhone. Calkey is Android first, but join below and your signup counts as an <b>iPhone vote</b>. <a href="#ios">See the iPhone battery</a></span>
+        <span>Looks like you're on an iPhone. Calkey is on Android only for now.</span>
       </div>
-      <div class="rv d3" id="join-top" data-join></div>
+      <div class="rv d3 getit" id="join-top"><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhero">Get it on Google Play</a><p class="fine">Android, in India for now. More countries soon.</p></div>
     </div>
 
     <div class="stage rv d2">
@@ -1251,42 +1250,25 @@ footer .brand svg{width:24px;height:24px;border-radius:7px}
   </div>
 </div></section>
 
-<!-- ================================================================ iPhone -->
-<section id="ios"><div class="wrap ios">
-  <div>
-    <p class="kick rv">iPhone people</p>
-    <h2 class="split">Charge up Calkey <em>for iPhone</em>.</h2>
-    <p class="sub rv" style="margin-bottom:20px">Calkey launches on Android. Every iPhone vote adds charge to this battery, and the fuller it gets, the higher iOS moves up our list. Everyone who charged it hears first when iOS is on the way.</p>
-    <p class="rv" style="margin:0 0 20px"><span data-ios-text>Early days. Be one of the first to plug in.</span></p>
-    <div data-vote class="rv"><button class="btn" type="button" data-vote-start><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>Plug in my iPhone vote</button></div>
-  </div>
-  <div class="rv d1" aria-hidden="true">
-    <div class="battery" data-battery><div class="cell" data-cell></div><div class="bolt"><svg viewBox="0 0 24 24"><path d="M13.5 2 4 14h6.5L9 22l11-13h-6.8z"/></svg></div></div>
-    <div class="blabel"><b data-pct hidden></b> <svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>iOS · charging</div>
-  </div>
-</div></section>
-
 <!-- ================================================================ faq -->
 <section id="faq" style="padding-top:40px"><div class="wrap faq">
   <p class="kick rv">Questions</p>
   <h2 class="split">Before you ask.</h2>
-  <details class="rv"><summary>When does it launch?</summary><p>Android first, soon. Everyone on the waitlist gets an invite before the public launch, in the order they joined.</p></details>
-  <details class="rv"><summary>Is it on iPhone?</summary><p>Not at launch. Calkey starts on Android. If you're on iPhone, <a href="#ios">plug your vote into the iPhone battery</a>. Every vote moves iOS up our list.</p></details>
+  <details class="rv"><summary>Where can I get it?</summary><p>On <a href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dfaq">Google Play</a>, for Android. It is in India for now, and more countries follow soon.</p></details>
+  <details class="rv"><summary>Is it on iPhone?</summary><p>Not yet. Calkey is on Android only for now.</p></details>
   <details class="rv"><summary>Which languages can I write in?</summary><p>Any language you'd text in: English, Hindi, Hinglish, Spanish, Portuguese, Bahasa, Arabic and more, mixed however you like. The app itself is in English, Hindi, Brazilian Portuguese, Spanish, Indonesian and German.</p></details>
   <details class="rv"><summary>How does it know my country's measures?</summary><p>Calkey works out your country from your phone the first time you open it, and keeps that answer. It only decides what plain words like "cup" and "bowl" mean. Words such as katori, concha or centong mean the same thing everywhere, and a size you name, like "200 ml", always wins.</p></details>
   <details class="rv"><summary>Do I have to weigh my food?</summary><p>No. Say "a cup", "2 slices", "1 katori", whatever you'd normally say. If you do know the weight, type it and Calkey does the exact sum.</p></details>
   <details class="rv"><summary>What can my partner see?</summary><p>Only today's totals: calories against the goal, protein, carbs and fat, water and the streak. Never the meals or the words you typed. You pair with a one-time code, one person at a time, and either of you can stop sharing whenever you like. Notifications are for goal moments only, at most once a day each.</p></details>
-  <details class="rv"><summary>What will it cost?</summary><p>Calkey is a subscription, yearly or monthly, starting with a 3-day free trial through Google Play. Everyone on the waitlist gets a mystery discount on their first month, revealed at launch.</p></details>
-  <details class="rv"><summary>What do you do with my email?</summary><p>Send you a link to confirm it's really you, then one email when it's your turn: your invite and your discount. Nothing else. If you never confirm, we delete the address after 7 days. Never sold, never shared. Write to support@calkey.app to be removed. The full detail is in the <a href="privacy.html#waitlist">privacy policy</a>.</p></details>
+  <details class="rv"><summary>What will it cost?</summary><p>Calkey is a subscription, yearly or monthly, starting with a 3-day free trial through Google Play.</p></details>
   <details class="rv"><summary>Is this medical advice?</summary><p>No. Calkey gives estimates to help you track. It doesn't diagnose or treat anything. Talk to a doctor or dietitian for medical guidance.</p></details>
 </div></section>
 
 <!-- ================================================================ final -->
-<section class="night final" id="join-bottom"><div class="wrap">
+<section class="night final" id="get"><div class="wrap">
   <svg class="mark rv" aria-hidden="true"><use href="#mark"/></svg>
-  <div data-counter hidden><div class="bignum" data-count>0</div><p class="sub" style="margin:8px auto 28px">people are waiting for Calkey. Be the next one.</p></div>
-  <h2 data-nocount class="split">Be first in line.</h2>
-  <div data-join></div>
+  <h2 class="split">Write your first meal today.</h2>
+  <div class="getit"><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dfooter">Get it on Google Play</a><p class="fine">Android, in India for now. More countries soon.</p></div>
 </div></section>
 
 <footer><div class="wrap">
@@ -1295,31 +1277,6 @@ footer .brand svg{width:24px;height:24px;border-radius:7px}
   <span class="langs"><a href="https://calkey.app/hi/" hreflang="hi" lang="hi">हिन्दी</a> · <a href="https://calkey.app/pt/" hreflang="pt-BR" lang="pt-BR">Português</a> · <a href="https://calkey.app/id/" hreflang="id" lang="id">Bahasa Indonesia</a></span>
 </div></footer>
 
-<template id="form-tpl">
-  <div class="coupon" data-coupon role="button" tabindex="0"><span class="off"><span class="reels" aria-hidden="true"><span class="reel"><span class="strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>?</span></span></span><span class="reel"><span class="strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>?</span></span></span></span>% OFF <svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg></span><span class="what" data-coupon-what><b>A mystery discount</b> on your first month for everyone who joins before launch. Revealed at launch.</span></div>
-  <form class="join" novalidate>
-    <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required aria-label="Email address">
-    <button class="btn" type="submit">Join waitlist</button>
-    <select name="cuisine" aria-label="What do you mostly eat?">
-      <option value="">What do you mostly eat? (optional)</option>
-      <option value="north_american">North American</option>
-      <option value="european">European</option>
-      <option value="south_asian">South Asian</option>
-      <option value="southeast_asian">Southeast Asian</option>
-      <option value="latin_american">Latin American</option>
-      <option value="east_asian">East Asian</option>
-      <option value="middle_eastern">Middle Eastern / North African</option>
-      <option value="african">African</option>
-      <option value="mixed">A bit of everything</option>
-    </select>
-    <div class="phone-pick" role="radiogroup" aria-label="Your phone">My phone:
-      <label><input type="radio" name="platform" value="android" checked><span>Android</span></label>
-      <label><input type="radio" name="platform" value="ios"><span>iPhone</span></label>
-    </div>
-    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-  </form>
-  <p class="fine">Android first. No spam: a link to confirm, then one email when it's your turn. <a href="privacy.html#waitlist">Privacy</a></p>
-</template>
 <script src="config.js"></script>
 <script>
 (() => {
@@ -1977,186 +1934,9 @@ footer .brand svg{width:24px;height:24px;border-radius:7px}
   });
   try { const w = localStorage.getItem("calkey_wear"); if (w && $(`.lt[data-wear="${w}"]`)) wear(w, false); else wear("tidal", false); } catch { wear("tidal", false); }
 
-  // ============================================================== waitlist
-  const api = (fn, body) => fetch(`${cfg.supabaseUrl}/rest/v1/rpc/${fn}`, {
-    method: "POST",
-    headers: { apikey: cfg.publishableKey, Authorization: `Bearer ${cfg.publishableKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify(body || {})
-  }).then(async r => { const j = await r.json().catch(() => null); if (!r.ok) throw Object.assign(new Error(j?.message || r.status), { data: j }); return j; });
-  const source = new URLSearchParams(location.search).get("ref") || document.referrer.replace(/^https?:\/\/([^/]+).*/, "$1") || null;
-  let shownCount = 0;
-  // Real numbers only, and only once they are worth showing: below
-  // showCountsFrom the page uses words instead of a small number.
-  function setCount(n) {
-    if (!Number.isFinite(n) || n < (cfg.showCountsFrom ?? 25)) return;
-    const pill = $("[data-pill]");
-    if (!pill.querySelector("[data-count]")) pill.innerHTML = `<b data-count>${fmt(shownCount)}</b> people are already waiting`;
-    $$("[data-counter]").forEach(el => el.hidden = false);
-    $$("[data-nocount]").forEach(el => el.hidden = true);
-    const from = shownCount; shownCount = n;
-    tween(from, n, from ? 600 : 1200, v => $$("[data-count]").forEach(el => el.textContent = fmt(v)));
-  }
-  // iPhone battery. iosGoal only sets how full it looks; the page promises
-  // nothing at 100%, so the copy must not either.
-  const IOS_GOAL = cfg.iosGoal || 1000;
-  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  function setIos(n, zap) {
-    if (!Number.isFinite(n)) return;
-    const pct = Math.min(100, (n / IOS_GOAL) * 100);
-    $("[data-cell]").style.setProperty("--pct", Math.max(3, pct) + "%");
-    const show = n >= (cfg.showIosFrom ?? 10), pctEl = $("[data-pct]");
-    pctEl.hidden = !show; pctEl.textContent = Math.max(1, Math.floor(pct)) + "%";
-    $("[data-ios-text]").innerHTML = show ? `<b>${fmt(n)}</b> iPhone votes so far${pct >= 100 ? ". Fully charged. We hear you, iPhone." : "."}` : "Early days. Be one of the first to plug in.";
-    if (zap) { const b = $("[data-battery]"); b.classList.remove("zap"); void b.offsetWidth; b.classList.add("zap"); }
-  }
-  const refresh = () => api("waitlist_stats").then(([st]) => { setCount(st.total); setIos(st.ios); }).catch(() => {});
-  if (cfg.supabaseUrl) { refresh(); setInterval(() => document.hidden || refresh(), 30000); }
-
-  function success(host, res) {
-    const url = location.origin + location.pathname;
-    const text = "I just joined the Calkey waitlist: log calories by writing what you ate, in your own language. The waitlist gets a mystery discount, revealed at launch:";
-    host.innerHTML = `
-      <div class="msg ok">
-        <h3>${res.already ? "You're already in." : "You're in!"} You're <span class="num">#${fmt(res.position)}</span>.</h3>
-        <p><b>Your mystery discount is locked to this email.</b> We'll reveal it with your invite.</p>
-        <div class="share">
-          <a target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(text + " " + url + "?ref=whatsapp")}">WhatsApp</a>
-          <a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url + "?ref=x")}">Post on X</a>
-          <button type="button" data-copy>Copy link</button>
-        </div>
-      </div>`;
-    host.querySelector("[data-copy]").onclick = e => navigator.clipboard?.writeText(url + "?ref=link").then(() => e.target.textContent = "Copied");
-  }
-  // A join is confirmed by email (23 Oct 2026): the page posts to the
-  // waitlist-join function, which sends one link; only confirmed people count.
-  function pending(host, email) {
-    host.innerHTML = `
-      <div class="msg ok">
-        <h3>Check your inbox.</h3>
-        <p>We sent a link to <b class="em"></b>. Tap it to confirm your spot and lock in your discount. Not there in a minute? Look in spam or Promotions.</p>
-        <div class="share"><button type="button" data-again>Use a different email</button></div>
-      </div>`;
-    host.querySelector(".em").textContent = email;
-    host.querySelector("[data-again]").onclick = () => {
-      try { localStorage.removeItem("calkey_pending"); } catch {}
-      $$("[data-join]").forEach(mountForm);
-    };
-  }
-  const JOIN_ERRORS = {
-    400: "That email doesn't look right. Check for typos?",
-    429: "Too many tries from this connection. Try again in an hour?",
-    503: "We're sending a lot of emails right now. Try again a little later?"
-  };
-  // One write path for both forms: the waitlist and the iPhone vote are the
-  // same row, the vote just sets platform = 'ios'.
-  async function join(email, platform, cuisine, website) {
-    const r = await fetch(`${cfg.supabaseUrl}/functions/v1/waitlist-join`, {
-      method: "POST",
-      headers: { apikey: cfg.publishableKey, "Content-Type": "application/json" },
-      body: JSON.stringify({ email, cuisine, locale: navigator.language || null, source, platform, website: website || "" })
-    });
-    const res = await r.json().catch(() => ({}));
-    if (r.ok) calkeyStat("waitlist_join", { platform, source: source || null, state: res.status || null });
-    if (!r.ok) throw Object.assign(new Error(JOIN_ERRORS[r.status] || "Something went wrong on our side. Try again in a moment?"), { status: r.status });
-    if (res.status === "confirmed") {
-      try { localStorage.setItem("calkey_joined", JSON.stringify({ ...res, email })); localStorage.removeItem("calkey_pending"); } catch {}
-      $$("[data-join]").forEach(h => success(h, { ...res, already: true }));
-      setCount(res.total); setIos(res.ios, platform === "ios");
-    } else {
-      try { localStorage.setItem("calkey_pending", JSON.stringify({ email, platform })); } catch {}
-      $$("[data-join]").forEach(h => pending(h, email));
-    }
-    return res;
-  }
-  const stored = () => { try { return JSON.parse(localStorage.getItem("calkey_joined") || "null"); } catch { return null; } };
-  const storedPending = () => { try { return JSON.parse(localStorage.getItem("calkey_pending") || "null"); } catch { return null; } };
-  const BOLT = `<svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg>`;
-  const voteHost = $("[data-vote]");
-  function votedIOS() {
-    try { localStorage.setItem("calkey_ios_vote", "1"); } catch {}
-    voteHost.innerHTML = `<div class="vote-done">${BOLT}Your vote is plugged in. We'll tell you the moment iOS is on the way.</div>`;
-  }
-  // A vote counts once its email is confirmed, like a join.
-  function voteDone(res, email) {
-    if (res.status === "confirmed") return votedIOS();
-    voteHost.innerHTML = `<div class="vote-done">${BOLT}Almost: tap the link we sent to <b class="em"></b> and your vote plugs in.</div>`;
-    voteHost.querySelector(".em").textContent = email;
-  }
-  voteHost.addEventListener("click", async e => {
-    const start = e.target.closest("[data-vote-start]");
-    if (!start) return;
-    const prev = stored()?.email ? stored() : storedPending();
-    if (prev?.email) {
-      start.disabled = true; start.textContent = "Plugging in…";
-      try { voteDone(await join(prev.email, "ios", null), prev.email); } catch { start.disabled = false; start.innerHTML = BOLT + "Plug in my iPhone vote"; }
-      return;
-    }
-    voteHost.innerHTML = `<form class="vote" novalidate><input type="email" name="email" placeholder="you@example.com" autocomplete="email" aria-label="Email address" required><button class="btn" type="submit">${BOLT}Plug in</button></form>`;
-    const f = voteHost.querySelector("form");
-    f.email.focus();
-    f.addEventListener("submit", async ev => {
-      ev.preventDefault();
-      voteHost.querySelector(".msg.err")?.remove();
-      const email = f.email.value.trim(), fail = m => f.insertAdjacentHTML("afterend", `<div class="msg err">${m}</div>`);
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fail("That email doesn't look right. Check for typos?");
-      if (!cfg.supabaseUrl) return fail("The waitlist isn't connected yet (config.js is missing).");
-      const b = f.querySelector("button"); b.disabled = true; b.textContent = "Plugging in…";
-      try { voteDone(await join(email, "ios", null), email); } catch (err) { b.disabled = false; b.innerHTML = BOLT + "Plug in"; fail(err.message); }
-    });
-  });
-  try { if (localStorage.getItem("calkey_ios_vote")) votedIOS(); } catch {}
-  if (isIOS) $("[data-ios-nudge]").hidden = false;
-
-  // Mystery coupon: the reels spin and always settle on "??". The real figure
-  // is announced at launch, so it must never appear anywhere on this page.
-  const TEASES = ["Nice try. It's a secret until launch.", "Still locked. Join to be there when it opens.", "Not telling. Yet.", "Patience. The reveal is worth it."];
-  let tease = 0;
-  const spinCoupon = c => { const reels = c.querySelectorAll(".reel"); reels.forEach(r => r.classList.add("spin")); reels.forEach((r, k) => setTimeout(() => r.classList.remove("spin"), 700 + k * 450)); };
-  function couponTap(c) {
-    spinCoupon(c);
-    c.classList.remove("tease"); void c.offsetWidth; c.classList.add("tease");
-    const what = c.querySelector("[data-coupon-what]");
-    what.dataset.orig ??= what.innerHTML;
-    what.innerHTML = `<b>${TEASES[tease++ % TEASES.length]}</b>`;
-    clearTimeout(c._t); c._t = setTimeout(() => what.innerHTML = what.dataset.orig, 2600);
-  }
-  function wireCoupon(c) {
-    c.addEventListener("click", () => couponTap(c));
-    c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); couponTap(c); } });
-    if (!reduce) setTimeout(() => spinCoupon(c), 900);
-  }
-  if (!reduce) setInterval(() => { if (!document.hidden) $$("[data-coupon]").forEach(spinCoupon); }, 6000);
-
-  const tpl = $("#form-tpl");
-  function mountForm(host) {
-    host.replaceChildren(tpl.content.cloneNode(true));
-    wireCoupon(host.querySelector("[data-coupon]"));
-    const form = host.querySelector("form");
-    if (isIOS) form.querySelector('[value="ios"]').checked = true;
-    form.addEventListener("submit", async e => {
-      e.preventDefault();
-      host.querySelector(".msg.err")?.remove();
-      const email = form.email.value.trim(), fail = m => form.insertAdjacentHTML("afterend", `<div class="msg err">${m}</div>`);
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fail("That email doesn't look right. Check for typos?");
-      if (!cfg.supabaseUrl) return fail("The waitlist isn't connected yet (config.js is missing).");
-      const btn = form.querySelector("button"); btn.disabled = true; btn.textContent = "Joining…";
-      try {
-        const platform = form.platform.value;
-        // The honeypot goes to the server, which answers a bot like a person.
-        const res = await join(email, platform, form.cuisine.value || null, form.website.value);
-        if (platform === "ios") voteDone(res, email);
-      } catch (err) {
-        btn.disabled = false; btn.textContent = "Join waitlist";
-        fail(err.message);
-      }
-    });
-  }
-  $$("[data-join]").forEach(mountForm);
-  // A returning visitor sees their spot, or the email they still have to
-  // confirm, instead of the form again.
-  const prev = stored(), waiting = storedPending();
-  if (prev?.position) $$("[data-join]").forEach(h => success(h, { ...prev, already: true }));
-  else if (waiting?.email) $$("[data-join]").forEach(h => pending(h, waiting.email));
+  // The app is on Google Play (India first, 12 Nov 2026); the waitlist is closed.
+  // An iPhone visitor is told plainly that it is Android only for now.
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) $("[data-ios-nudge]").hidden = false;
 })();
 </script>
 <script>

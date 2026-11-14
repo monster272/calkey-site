@@ -110,6 +110,20 @@
     history.replaceState(null, "", location.pathname + "?t=" + encodeURIComponent(token));
     return show("", `<h1>We couldn't reach the server.</h1><p>Your link still works. Check your connection and <a href="">try again</a>.</p>`);
   }
+  // A confirmed sign-up is the one event Google Ads is measured on. The tag
+  // loads only here, only now, and only when config.js names an action; it
+  // never sees the email or the token (already out of the URL above).
+  const ads = cfg.adsConversion;
+  if (ads?.id && ads?.label) {
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ads.id);
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    const gtag = function () { window.dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", ads.id, { allow_ad_personalization_signals: false });
+    gtag("event", "conversion", { send_to: ads.id + "/" + ads.label });
+  }
   let email = null;
   try {
     email = JSON.parse(localStorage.getItem("calkey_pending") || "null")?.email || null;
