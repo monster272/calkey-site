@@ -14,55 +14,95 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="Calkey">
 <meta property="og:title" content="Calkey: AI कैलोरी और मैक्रो ट्रैकर, अपनी भाषा में"><meta property="og:description" content="जो खाया, हिंदी, हिंग्लिश या अंग्रेज़ी में लिखिए, और Calkey कैलोरी, प्रोटीन, कार्ब्स और फ़ैट निकाल देता है। कटोरी और चाय के कप समझता है। अब Android पर, Google Play में।">
 <meta property="og:url" content="https://calkey.app/hi/"><meta property="og:image" content="https://calkey.app/og-image.png">
-<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#F4F4F1">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#081215"><meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap"></noscript>
 <style>
-:root{--page:#F4F4F1;--page2:#E8F1EE;--float:#FFFFFF;--sunk:#EBEDE9;--panel:#E3F3F0;--ink:#0C1B1F;--soft:#3F5257;--faint:#5C6E72;--rule:#DDE2E0;--accent:#0B6B74;--wash:#D2EEEA;
---night:#081215;--display:"Fraunces",Georgia,serif;--sans:"Inter","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(80% 40% at 50% 0%,color-mix(in srgb,var(--wash) 70%,transparent),transparent 70%),linear-gradient(var(--page),var(--page2));color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-underline-offset:3px}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--page) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
-nav .wrap{display:flex;align-items:center;gap:16px;height:62px}.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font:600 23px/1 var(--display);letter-spacing:-.02em}
-.brand svg{width:28px;height:28px;border-radius:8px;box-shadow:0 0 0 1px var(--rule)}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:var(--page);text-decoration:none;font:600 15px var(--sans);border-radius:999px;padding:13px 24px;min-height:48px}
-nav .btn{margin-left:auto;min-height:40px;padding:9px 18px;font-size:14px}
-header{padding:64px 0 40px}.pill{display:inline-flex;gap:8px;align-items:center;background:var(--wash);color:var(--accent);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;margin-bottom:22px}
-h1{font:600 clamp(44px,8vw,88px)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 22px}h1 span{display:block;color:var(--accent)}
-:lang(hi) h1{font-family:"Noto Sans Devanagari",var(--sans);letter-spacing:0;line-height:1.15}
-.lede{font-size:19px;color:var(--soft);max-width:34em;margin:0 0 28px}.lede b{color:var(--ink);font-weight:600}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.chip{background:var(--float);border:1px solid var(--rule);border-radius:999px;padding:9px 16px;font-size:15px}.chip b{color:var(--accent);margin-left:8px;font-variant-numeric:tabular-nums}
-section{padding:56px 0}h2{font:600 clamp(30px,4.6vw,46px)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 24px}:lang(hi) h2{font-family:"Noto Sans Devanagari",var(--sans);letter-spacing:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--float);border:1px solid var(--rule);border-radius:22px;padding:22px}
-.card b{display:block;font:600 19px/1.3 var(--display);margin-bottom:6px}:lang(hi) .card b{font-family:"Noto Sans Devanagari",var(--sans)}.card span{color:var(--soft);font-size:15.5px}
-.guide{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.guide a{display:flex;justify-content:space-between;gap:10px;background:var(--float);border:1px solid var(--rule);border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--ink)}
-.guide a i{font-style:normal;color:var(--accent);font-weight:600;white-space:nowrap}
-details{border-bottom:1px solid var(--rule);padding:16px 0;max-width:780px}summary{font:600 18px var(--sans);cursor:pointer}details p{color:var(--soft);margin:8px 0 0}
-.end{background:var(--night);color:#EDF3F1;border-radius:30px;padding:40px 32px;text-align:center}.end h2{color:#EDF3F1}.end p{color:#B4C4C2;margin:0 auto 24px;max-width:30em}.end .btn{background:#45D0D4;color:#0C1B1F}
-footer{border-top:1px solid var(--rule);padding:28px 0 44px;color:var(--faint);font-size:14px}footer .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between}footer a{color:var(--soft)}
-.langs a{margin-right:12px}
-@media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media (max-width:560px){.grid{grid-template-columns:1fr}header{padding:44px 0 28px}.lede{font-size:17px}}
-@media (prefers-color-scheme:dark){:root{--page:#081215;--page2:#0B1A1E;--float:#0F1D21;--sunk:#16272C;--ink:#EDF3F1;--soft:#B4C4C2;--faint:#8B9E9D;--rule:#1F3237;--accent:#45D0D4;--wash:#133A3E;--night:#0F1D21;color-scheme:dark}.btn{background:#45D0D4;color:#0C1B1F}}
+:root{--bg:#081215;--bg2:#0B1A1E;--card:#0F1D21;--sunk:#16272C;--rule:#1F3237;--rule2:#2B4349;--fg:#EDF3F1;--fg2:#B4C4C2;--fg3:#8B9E9D;--aqua:#45D0D4;--volt:#C6F035;--volt2:#D7F86A;--ink:#0C1B1F;
+--display:"Fraunces",Georgia,serif;--sans:"Inter","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--ease:cubic-bezier(.16,1,.3,1);--gutter:clamp(16px,5vw,80px);--gap:clamp(16px,2vw,32px);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70% 45% at 50% 0,rgba(17,85,91,.30),transparent 70%),linear-gradient(180deg,var(--bg),var(--bg2))}
+::selection{background:var(--aqua);color:var(--ink)}:focus-visible{outline:2px solid var(--aqua);outline-offset:3px;border-radius:6px}
+a{color:inherit;text-decoration:none}p{margin:0}
+.wrap{width:min(100% - 2 * var(--gutter),1320px);margin:0 auto}
+nav{position:sticky;top:0;z-index:5;background:rgba(8,18,21,.78);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:72px}
+.brand{display:inline-flex;align-items:center;gap:11px;color:var(--fg);font:600 24px/1 var(--display);letter-spacing:-.02em}
+.brand svg{width:30px;height:30px;border-radius:9px;box-shadow:0 0 0 1px rgba(237,243,241,.08)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--volt);color:var(--ink);font:600 15.5px/1 var(--sans);border-radius:999px;padding:0 24px 0 28px;height:54px;box-shadow:0 14px 34px -18px rgba(198,240,53,.55);transition:background-color .3s,transform .45s var(--ease)}
+.btn:hover{background:var(--volt2)}.btn:active{transform:scale(.97)}
+.btn svg{width:17px;height:17px;flex:none;transition:transform .45s var(--ease)}.btn:hover svg{transform:translateX(4px)}
+nav .btn{margin-left:auto;height:44px;padding:0 18px 0 20px;font-size:14.5px;box-shadow:none}
+header{padding:clamp(72px,10vw,150px) 0 clamp(80px,10vw,150px)}
+h1{font:500 clamp(46px,1.6rem + 5.4vw,96px)/1 var(--display);letter-spacing:-.035em;margin:0 0 28px;text-wrap:balance}
+h1 span{display:block}
+:lang(hi) h1{font-family:"Noto Sans Devanagari",var(--sans);font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.lede{font-size:clamp(17px,1rem + .3vw,20px);line-height:1.55;color:var(--fg2);max-width:34em;margin:0 0 34px}.lede b{color:var(--fg);font-weight:500}
+.fine{margin-top:16px;font-size:14px;color:var(--fg3)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:48px}
+.chip{display:inline-flex;align-items:baseline;gap:10px;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:10px 18px;font-size:15px}
+.chip b{font:500 17px/1 var(--display);color:var(--aqua);font-variant-numeric:tabular-nums}
+section{padding:0 0 clamp(96px,11vw,160px)}
+.head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.head h2{grid-column:1/span 7}.head p{grid-column:9/span 4;color:var(--fg2);margin-bottom:.35em}
+h2{font:500 clamp(34px,1.2rem + 2.8vw,60px)/1.04 var(--display);letter-spacing:-.03em;margin:0;text-wrap:balance}
+:lang(hi) h2{font-family:"Noto Sans Devanagari",var(--sans);font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(32px,4vw,64px)}
+.card{padding:26px 0;border-top:1px solid var(--rule)}
+.card b{display:block;font:500 21px/1.25 var(--display);letter-spacing:-.015em;margin-bottom:8px}
+:lang(hi) .card b{font-family:"Noto Sans Devanagari",var(--sans);font-weight:600;letter-spacing:0}
+.card span{color:var(--fg2);font-size:15.5px}
+.guide{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.guide a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:18px 20px;transition:border-color .3s,background-color .3s}
+.guide a:hover{border-color:var(--rule2);background:#12232A}
+.guide a i{font:500 21px/1 var(--display);font-style:normal;white-space:nowrap;font-variant-numeric:tabular-nums}
+.guide a i small{font:500 12.5px var(--sans);color:var(--fg2);margin-left:4px}
+.faq-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start}
+.faq-grid h2{grid-column:1/span 4}.faq{grid-column:6/span 7}
+details{border-bottom:1px solid var(--rule)}details:first-child{border-top:1px solid var(--rule)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;cursor:pointer;font:500 clamp(19px,1.1rem + .4vw,23px)/1.3 var(--display);letter-spacing:-.012em}
+:lang(hi) summary{font-family:"Noto Sans Devanagari",var(--sans);font-weight:600;letter-spacing:0}
+summary::-webkit-details-marker{display:none}
+summary i{position:relative;flex:none;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--rule2);transition:background-color .3s}
+summary i::before,summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.6px;background:var(--fg);border-radius:2px;transform:translate(-50%,-50%)}
+summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .45s var(--ease)}
+details[open] summary i{background:var(--fg)}details[open] summary i::before{background:var(--ink)}details[open] summary i::after{transform:translate(-50%,-50%);background:var(--ink)}
+details p{color:var(--fg2);padding:0 0 26px;max-width:44em}
+.end h2{font-size:clamp(42px,1.4rem + 4.4vw,88px);line-height:1;max-width:11em;margin-bottom:24px}
+:lang(hi) .end h2{line-height:1.15}
+.end p{color:var(--fg2);margin:0 0 32px;max-width:32em}
+footer{border-top:1px solid var(--rule);background:#071013;padding:48px 0 32px;color:var(--fg3);font-size:14px}
+footer .row{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a{color:var(--fg2);transition:color .25s}footer a:hover{color:var(--aqua)}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.word{margin-top:clamp(48px,7vw,104px);font:500 clamp(4rem,1rem + 15vw,15rem)/.9 var(--display);letter-spacing:-.05em;color:rgba(237,243,241,.055);white-space:nowrap;user-select:none;overflow:hidden;padding-bottom:.08em}
+.word i{display:inline-block;width:.05em;height:.6em;margin-left:.05em;border-radius:2px;background:var(--volt);opacity:.45}
+@media (max-width:960px){.head h2,.head p,.faq-grid h2,.faq{grid-column:1/-1}.head p{margin:0}.faq-grid h2{margin-bottom:12px}.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}nav .wrap{height:64px}nav .btn{height:42px;padding:0 16px;font-size:14px}nav .btn svg{display:none}header .btn{width:100%}.links a{min-height:40px;display:inline-flex;align-items:center}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://calkey.app/hi/", "url": "https://calkey.app/hi/", "name": "Calkey: AI कैलोरी और मैक्रो ट्रैकर, अपनी भाषा में", "description": "जो खाया, हिंदी, हिंग्लिश या अंग्रेज़ी में लिखिए, और Calkey कैलोरी, प्रोटीन, कार्ब्स और फ़ैट निकाल देता है। कटोरी और चाय के कप समझता है। अब Android पर, Google Play में।", "inLanguage": "hi", "isPartOf": {"@id": "https://calkey.app/#website"}, "about": {"@id": "https://calkey.app/#app"}}</script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="18" y1="18" x2="90" y2="90"><stop offset="0" stop-color="#0C1B1F"/><stop offset=".38" stop-color="#0C1B1F"/><stop offset="1" stop-color="#11555B"/></linearGradient><symbol id="mark" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="url(#tile)"/><path fill="#EDF3F1" d="M62.213,29.734 A25,25 0 1 0 62.213,78.266 A1.3,1.3 0 0 0 63.2,77.004 L63.2,68.333 A1.3,1.3 0 0 0 61.42,67.125 A14.125,14.125 0 1 1 61.42,40.875 A1.3,1.3 0 0 0 63.2,39.667 L63.2,30.996 A1.3,1.3 0 0 0 62.213,29.734 Z"/><path fill="#CFF24A" d="M69.394,38.222 H72.231 A1.3,1.3 0 0 1 73.531,39.522 V68.478 A1.3,1.3 0 0 1 72.231,69.778 H69.394 A1.3,1.3 0 0 1 68.094,68.478 V39.522 A1.3,1.3 0 0 1 69.394,38.222 Z"/></symbol></svg>
-<nav><div class="wrap"><a class="brand" href="/hi/" aria-label="Calkey"><svg aria-hidden="true"><use href="#mark"/></svg>calkey</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए</a></div></nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="18" y1="18" x2="90" y2="90"><stop offset="0" stop-color="#0C1B1F"/><stop offset=".38" stop-color="#0C1B1F"/><stop offset="1" stop-color="#11555B"/></linearGradient><symbol id="mark" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="url(#tile)"/><path fill="#EDF3F1" d="M62.213,29.734 A25,25 0 1 0 62.213,78.266 A1.3,1.3 0 0 0 63.2,77.004 L63.2,68.333 A1.3,1.3 0 0 0 61.42,67.125 A14.125,14.125 0 1 1 61.42,40.875 A1.3,1.3 0 0 0 63.2,39.667 L63.2,30.996 A1.3,1.3 0 0 0 62.213,29.734 Z"/><path fill="#C6F035" d="M69.394,38.222 H72.231 A1.3,1.3 0 0 1 73.531,39.522 V68.478 A1.3,1.3 0 0 1 72.231,69.778 H69.394 A1.3,1.3 0 0 1 68.094,68.478 V39.522 A1.3,1.3 0 0 1 69.394,38.222 Z"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+<nav><div class="wrap"><a class="brand" href="/hi/" aria-label="Calkey"><svg aria-hidden="true"><use href="#mark"/></svg>calkey</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए<svg aria-hidden="true"><use href="#arrow"/></svg></a></div></nav>
+<main>
 <header><div class="wrap">
-  <span class="pill">अब Google Play पर, Android के लिए।</span>
   <h1>जो खाया,<span>वही लिखिए।</span></h1>
   <p class="lede">एक वाक्य लिखिए, जैसे किसी को मैसेज लिखा जाता है: <b>2 roti, dal tadka</b>, <b>दो रोटी और एक कटोरी दही</b>। Calkey कुछ ही सेकंड में कैलोरी और मैक्रो निकाल देता है। न बारकोड, न तराज़ू, न डेटाबेस।</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए</a>
-  <div class="chips" aria-label="कितनी कैलोरी?"><span class="chip">2 roti, dal tadka<b>350 kcal</b></span><span class="chip">1 कटोरी चावल<b>165 kcal</b></span><span class="chip">1 कप चाय, चीनी के साथ<b>80 kcal</b></span></div>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+  <p class="fine">अब Google Play पर, Android के लिए।</p>
+  <div class="chips" aria-label="कितनी कैलोरी?"><span class="chip">2 roti, dal tadka<b>350<small> kcal</small></b></span><span class="chip">1 कटोरी चावल<b>165<small> kcal</small></b></span><span class="chip">1 कप चाय, चीनी के साथ<b>80<small> kcal</small></b></span></div>
 </div></header>
-<section><div class="wrap"><h2>रोज़ के लिए बना</h2><div class="grid"><div class="card"><b>लिखिए या बोलिए</b><span>हिंदी, हिंग्लिश, अंग्रेज़ी या कई और भाषाओं में। माइक दबाइए और बताइए कि क्या खाया।</span></div><div class="card"><b>आपकी कटोरी, आपका कप</b><span>एक कटोरी दाल लगभग 150 ग्राम, एक चाय का कप 150 ml। Calkey घर के माप समझता है।</span></div><div class="card"><b>दो टैप में सुधार</b><span>हर अंक एक अनुमान है। ½ या 2× चुनिए, और Calkey अगली बार वही याद रखता है।</span></div><div class="card"><b>प्रोटीन पर नज़र</b><span>आपके शरीर और लक्ष्य से कैलोरी, प्रोटीन, कार्ब्स और फ़ैट के रोज़ के लक्ष्य।</span></div><div class="card"><b>पानी और वज़न</b><span>एक टैप में एक गिलास पानी, और वज़न का चार्ट।</span></div><div class="card"><b>एक पार्टनर के साथ</b><span>आज के टोटल एक व्यक्ति के साथ शेयर कीजिए। उन्हें यह कभी नहीं दिखता कि आपने क्या खाया।</span></div></div></div></section>
-<section><div class="wrap"><h2>कितनी कैलोरी?</h2><p>रोज़ के खाने, उसी माप में जिसमें खाया जाता है:</p><div class="guide"><a href="/calories/roti/"><span>रोटी</span><i>100 kcal</i></a><a href="/calories/dal-tadka/"><span>दाल तड़का, 1 कटोरी</span><i>150 kcal</i></a><a href="/calories/rice-katori/"><span>चावल, 1 कटोरी</span><i>165 kcal</i></a><a href="/calories/chai/"><span>चाय, 1 कप</span><i>80 kcal</i></a><a href="/calories/paneer/"><span>पनीर, 100 ग्राम</span><i>290 kcal</i></a><a href="/calories/dahi/"><span>दही, 1 कटोरी</span><i>90 kcal</i></a></div></div></section>
-<section><div class="wrap"><h2>सवाल</h2><details><summary>यह कहाँ मिलेगा?</summary><p>Android पर, Google Play में। अभी भारत में, और जल्द दूसरे देशों में। iPhone पर अभी नहीं।</p></details><details><summary>क्या ऐप हिंदी में है?</summary><p>हाँ। ऐप हिंदी, अंग्रेज़ी, पुर्तगाली, स्पैनिश, इंडोनेशियाई और जर्मन में है, और खाना किसी भी भाषा में, मिलाकर भी, लिखा जा सकता है।</p></details><details><summary>क्या खाना तौलना पड़ेगा?</summary><p>नहीं। &quot;एक कटोरी&quot;, &quot;दो रोटी&quot;, जैसे आम तौर पर कहा जाता है, वैसे ही लिखिए। वज़न पता हो, तो लिखिए, Calkey सटीक हिसाब लगाता है।</p></details><details><summary>क्या यह चिकित्सीय सलाह है?</summary><p>नहीं। Calkey अनुमान देता है, ताकि खाना ट्रैक किया जा सके। चिकित्सीय सलाह के लिए डॉक्टर या डायटीशियन से बात कीजिए।</p></details></div></section>
-<section><div class="wrap"><div class="end"><h2>आज का पहला खाना लिखिए।</h2><p>Calkey अब Google Play पर है, Android के लिए।</p><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए</a></div></div></section>
-<footer><div class="wrap"><span>© 2026 Interludeapps · अनुमान, चिकित्सीय सलाह नहीं · <a href="/calories/">कैलोरी गाइड</a> · <a href="/privacy.html">प्राइवेसी</a> · <a href="/delete-account.html">खाता मिटाएँ</a></span><span class="langs"><a href="/" hreflang="en" lang="en">English</a> <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a> <a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></span></div></footer>
+<section><div class="wrap"><div class="head"><h2>रोज़ के लिए बना</h2></div><div class="grid"><div class="card"><b>लिखिए या बोलिए</b><span>हिंदी, हिंग्लिश, अंग्रेज़ी या कई और भाषाओं में। माइक दबाइए और बताइए कि क्या खाया।</span></div><div class="card"><b>आपकी कटोरी, आपका कप</b><span>एक कटोरी दाल लगभग 150 ग्राम, एक चाय का कप 150 ml। Calkey घर के माप समझता है।</span></div><div class="card"><b>दो टैप में सुधार</b><span>हर अंक एक अनुमान है। ½ या 2× चुनिए, और Calkey अगली बार वही याद रखता है।</span></div><div class="card"><b>प्रोटीन पर नज़र</b><span>आपके शरीर और लक्ष्य से कैलोरी, प्रोटीन, कार्ब्स और फ़ैट के रोज़ के लक्ष्य।</span></div><div class="card"><b>पानी और वज़न</b><span>एक टैप में एक गिलास पानी, और वज़न का चार्ट।</span></div><div class="card"><b>एक पार्टनर के साथ</b><span>आज के टोटल एक व्यक्ति के साथ शेयर कीजिए। उन्हें यह कभी नहीं दिखता कि आपने क्या खाया।</span></div></div></div></section>
+<section><div class="wrap"><div class="head"><h2>कितनी कैलोरी?</h2><p>रोज़ के खाने, उसी माप में जिसमें खाया जाता है:</p></div><div class="guide"><a href="/calories/roti/"><span>रोटी</span><i>100<small>kcal</small></i></a><a href="/calories/dal-tadka/"><span>दाल तड़का, 1 कटोरी</span><i>150<small>kcal</small></i></a><a href="/calories/rice-katori/"><span>चावल, 1 कटोरी</span><i>165<small>kcal</small></i></a><a href="/calories/chai/"><span>चाय, 1 कप</span><i>80<small>kcal</small></i></a><a href="/calories/paneer/"><span>पनीर, 100 ग्राम</span><i>290<small>kcal</small></i></a><a href="/calories/dahi/"><span>दही, 1 कटोरी</span><i>90<small>kcal</small></i></a></div></div></section>
+<section><div class="wrap faq-grid"><h2>सवाल</h2><div class="faq"><details><summary>यह कहाँ मिलेगा?<i aria-hidden="true"></i></summary><p>Android पर, Google Play में। अभी भारत में, और जल्द दूसरे देशों में। iPhone पर अभी नहीं।</p></details><details><summary>क्या ऐप हिंदी में है?<i aria-hidden="true"></i></summary><p>हाँ। ऐप हिंदी, अंग्रेज़ी, पुर्तगाली, स्पैनिश, इंडोनेशियाई और जर्मन में है, और खाना किसी भी भाषा में, मिलाकर भी, लिखा जा सकता है।</p></details><details><summary>क्या खाना तौलना पड़ेगा?<i aria-hidden="true"></i></summary><p>नहीं। &quot;एक कटोरी&quot;, &quot;दो रोटी&quot;, जैसे आम तौर पर कहा जाता है, वैसे ही लिखिए। वज़न पता हो, तो लिखिए, Calkey सटीक हिसाब लगाता है।</p></details><details><summary>क्या यह चिकित्सीय सलाह है?<i aria-hidden="true"></i></summary><p>नहीं। Calkey अनुमान देता है, ताकि खाना ट्रैक किया जा सके। चिकित्सीय सलाह के लिए डॉक्टर या डायटीशियन से बात कीजिए।</p></details></div></div></section>
+<section class="end"><div class="wrap"><h2>आज का पहला खाना लिखिए।</h2><p>Calkey अब Google Play पर है, Android के लिए।</p><a class="btn" href="https://play.google.com/store/apps/details?id=com.calkey.app&amp;referrer=utm_source%3Dcalkey.app%26utm_campaign%3Dhi">Google Play से पाइए<svg aria-hidden="true"><use href="#arrow"/></svg></a></div></section>
+</main>
+<footer><div class="wrap"><div class="row"><span>© 2026 Interludeapps · अनुमान, चिकित्सीय सलाह नहीं</span><span class="links"><a href="/">English</a><a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/calories/">कैलोरी गाइड</a><a href="/privacy.html">प्राइवेसी</a><a href="/delete-account.html">खाता मिटाएँ</a></span></div><div class="word" aria-hidden="true">calkey<i></i></div></div></footer>
 <script src="/stats.js" defer></script>
 </body>
 </html>
