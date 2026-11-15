@@ -129,7 +129,7 @@
   --shadow:0 18px 40px -20px rgba(12,27,31,.28); --phoneShadow:0 50px 90px -40px rgba(12,27,31,.55);
   --errBg:#FFE2C2; --errInk:#6B3300;
   /* the icon's own colours: they never change with the theme */
-  --paper:#0C1B1F; --foam:#EDF3F1; --navy:#0C1B1F; --nightBg:#081215; --penIcon:#45D0D4;
+  --paper:#0C1B1F; --foam:#EDF3F1; --navy:#0C1B1F; --nightBg:#081215; --penIcon:#CFF24A;
   --tile:linear-gradient(135deg,#0C1B1F 38%,#11555B);
   --display:"Fraunces",Georgia,serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -157,7 +157,7 @@
 }
 /* Tidal is everyone's from day one; the others unlock with the streak (domain/AccentUnlocks).
    --pen draws on the light page, --penIcon is the app icon's pen (each colour's night accent). */
-:root[data-wear="tidal"]{--pen:#0B6B74;--penIcon:#45D0D4;
+:root[data-wear="tidal"]{--pen:#0B6B74;--penIcon:#CFF24A;
   --aL:#0B6B74;--afL:#0B6B74;--aonL:#FFFFFF;--asL:#D2EEEA;--mpL:#5A45D8;--mcL:#8C5F00;--mfL:#A8326F;--flL:#06474D;--chkL:#FFE2C2;--chkInkL:#6B3300;
   --aD:#45D0D4;--afD:#45D0D4;--aonD:#081215;--asD:#133A3E;--mpD:#A79BFF;--mcD:#F2C94C;--mfD:#F17DB8;--flD:#CFF24A;--chkD:#3A2510;--chkInkD:#FFCF99}
 :root[data-wear="volt"]{--pen:#4D6A00;--penIcon:#CFF24A;
@@ -837,7 +837,7 @@ footer .brand svg{width:24px;height:24px;border-radius:7px}
   </defs>
   <linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="18" y1="18" x2="90" y2="90"><stop offset="0" stop-color="#0C1B1F"/><stop offset=".38" stop-color="#0C1B1F"/><stop offset="1" stop-color="#11555B"/></linearGradient>
   <symbol id="mark" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="url(#tile)"/><use href="#ring" fill="#EDF3F1"/><use href="#cursor" class="pen" style="fill:var(--ipen)"/></symbol>
-  <symbol id="mark-default" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="url(#tile)"/><use href="#ring" fill="#EDF3F1"/><use href="#cursor" fill="#45D0D4"/></symbol>
+  <symbol id="mark-default" viewBox="18 18 72 72"><rect x="0" y="0" width="120" height="120" fill="url(#tile)"/><use href="#ring" fill="#EDF3F1"/><use href="#cursor" fill="#CFF24A"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M19.48 12.35c-1.57-4.08-7.16-4.3-5.81-10.23.1-.44-.37-.78-.75-.55C9.29 3.71 6.68 8 8.87 13.62c.18.46-.36.89-.75.59-1.81-1.37-2-3.34-1.84-4.75.06-.52-.62-.77-.91-.34C4.69 10.16 4 11.84 4 14.37c.38 5.6 5.11 7.32 6.81 7.54 2.43.31 5.06-.14 6.95-1.87 2.08-1.93 2.84-5.01 1.72-7.69zM10.2 17.38c1.44-.35 2.18-1.39 2.38-2.31.33-1.43-.96-2.83-.09-5.09.33 1.87 3.27 3.04 3.27 5.08.08 2.53-2.66 4.7-5.56 2.32z"/></symbol>
   <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></g></symbol>
