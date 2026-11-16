@@ -263,7 +263,7 @@ html.anim .statement .w.lit{color:var(--fg)}
 .bar{display:grid;grid-template-rows:1fr auto;gap:10px;text-align:center;border-radius:14px}
 .bar-stack{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;gap:10px;min-height:0}
 .bar-k{font:500 15px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg3);transition:color .3s}
-.bar-col{height:calc(var(--h) * (100% - 26px));min-height:40px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#1A3237,#12252A);box-shadow:inset 0 1px 0 rgba(237,243,241,.06);transform-origin:bottom;transition:background .45s var(--ease),box-shadow .45s var(--ease),transform 1.1s var(--ease)}
+.bar-col{height:calc(100% - 26px);min-height:40px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#1A3237,#12252A);box-shadow:inset 0 1px 0 rgba(237,243,241,.06);transform-origin:bottom;transition:background .45s var(--ease),box-shadow .45s var(--ease),transform 1.1s var(--ease)}
 html.anim .bars:not(.in) .bar-col{transform:scaleY(.08)}
 .bar-l{font-size:13px;font-weight:500;color:var(--fg3);transition:color .3s;padding-top:10px;border-top:1px solid var(--rule);min-height:44px}
 .bar:hover .bar-col{background:linear-gradient(180deg,#22424A,#15292E)}
@@ -359,8 +359,9 @@ html.anim .bars:not(.in) .bar-col{transform:scaleY(.08)}
 .steps-wrap{position:relative}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap)}
 .step{transition:opacity .5s var(--ease)}
-html.anim .step{opacity:.4}
-html.anim .step.on{opacity:1}
+html.anim .step .n{opacity:.45;transition:opacity .5s var(--ease)}
+html.anim .step h3,html.anim .step p{opacity:.78;transition:opacity .5s var(--ease)}
+html.anim .step.on .n,html.anim .step.on h3,html.anim .step.on p{opacity:1}
 .step .n{font:500 15px/1 var(--display);color:var(--aqua);font-variant-numeric:tabular-nums}
 .step h3{font:500 21px/1.2 var(--display);letter-spacing:-.015em;margin:12px 0 8px}
 .step p{color:var(--fg2);font-size:15px}
@@ -403,7 +404,7 @@ html.anim .step.on{opacity:1}
 .ww-water .w2{fill:#1D5F8F;opacity:.85;animation:wave 11s linear infinite reverse}
 .ww-water::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#2878B3,#174D73)}
 @keyframes wave{to{transform:translateX(-50%)}}
-.ww-txt{position:absolute;left:20px;top:18px;z-index:2}
+.ww-txt{position:absolute;left:20px;top:18px;z-index:2;text-shadow:0 1px 10px rgba(8,18,21,.6)}
 .ww-txt .fig{font-size:40px;line-height:1;letter-spacing:-.03em;display:flex;align-items:center;gap:8px}
 .ww-txt small{display:block;font-size:13px;color:var(--fg2);margin-top:4px}
 .ww-txt .ok{width:20px;height:20px;border-radius:50%;background:var(--volt);color:var(--ink);display:none;place-items:center}
@@ -420,14 +421,13 @@ html.anim .step.on{opacity:1}
 .feat p{color:var(--fg2);font-size:15.5px;margin-top:6px;max-width:34em}
 
 /* ---------- yours ---------- */
-.yours{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
-.own{background:var(--card);border:1px solid var(--rule);border-radius:24px;padding:28px 28px 30px}
-.own .pen{height:22px;width:3.5px;margin-bottom:22px}
-.own h3{font:500 24px/1.2 var(--display);letter-spacing:-.015em}
+.yours{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,6vw,96px)}
+.own{padding:26px 0 30px;border-top:1px solid var(--rule)}
+.own h3{font:500 22px/1.25 var(--display);letter-spacing:-.015em}
 .own p{color:var(--fg2);margin-top:10px;font-size:16px;max-width:30em}
 .own a{color:var(--fg);border-bottom:1px solid var(--rule2);transition:border-color .3s}
 .own a:hover{border-color:var(--aqua)}
-.disclaim{margin-top:28px;color:var(--fg3);font-size:14.5px}
+.disclaim{margin-top:8px;padding-top:22px;border-top:1px solid var(--rule);color:var(--fg3);font-size:14.5px}
 
 /* ---------- marquee ---------- */
 .marq{border-block:1px solid var(--rule);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
@@ -435,6 +435,11 @@ html.anim .step.on{opacity:1}
 .marq span{display:inline-flex;align-items:center;gap:44px;font:500 22px/1 var(--display);color:var(--fg2);white-space:nowrap}
 .marq span::after{content:"";width:3px;height:18px;border-radius:2px;background:var(--volt);opacity:.8}
 @keyframes marq{to{transform:translateX(-50%)}}
+.marq:hover .marq-in,.marq.held .marq-in{animation-play-state:paused}
+html:not(.anim) .marq{-webkit-mask-image:none;mask-image:none}
+html:not(.anim) .marq-in{animation:none;flex-wrap:wrap;justify-content:center;width:auto;row-gap:18px;column-gap:26px;padding:24px var(--gutter)}
+html:not(.anim) .marq span:last-child::after{display:none}
+html:not(.anim) .marq span{gap:26px}
 .marq-label{display:block;text-align:center;font-size:14px;color:var(--fg3);margin-bottom:18px}
 
 /* ---------- faq ---------- */
@@ -587,13 +592,9 @@ html.anim .step.on{opacity:1}
   <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-again" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.7"/><path d="M20 4v4.7h-4.7"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.3"/><path d="M4 20v-4.7h4.7"/></g></symbol>
   <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8"/><path d="M8 11.5H6.5A2.5 2.5 0 0 0 4 14v4.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V14a2.5 2.5 0 0 0-2.5-2.5H16"/></g></symbol>
-  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.5 4.5 6 7.6 6 11a6 6 0 0 1-12 0c0-3.4 2.5-6.5 6-11z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
   <symbol id="i-week" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M7.5 17v-2.5M10.5 17v-4M13.5 17v-3M16.5 17v-1.5"/></g></symbol>
   <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g></symbol>
-  <symbol id="i-letters" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7.5a5 5 0 1 0 0 9"/><path d="M14 6.5v11"/><path d="M14 12l5-5.5M15.8 10.2 19.5 17.5"/></g></symbol>
-  <symbol id="i-partner" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8.5" cy="12" r="5.5"/><circle cx="15.5" cy="12" r="5.5"/></g></symbol>
-  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4.5 14h6.8l-1 7.5L19.5 10h-6.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></g></symbol>
+  <symbol id="i-letters" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4.1 2-6 .5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></g></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
@@ -841,19 +842,15 @@ html.anim .step.on{opacity:1}
             <span class="ww-tap" aria-hidden="true">Tap for a glass</span>
           </button>
         </div>
-        <div><h3>A glass of water is one tap</h3><p>The home-screen widget fills as you drink. Try it: each tap is a glass.</p></div>
+        <div><h3>A glass of water is one tap</h3><p>The home-screen widget fills as you drink, and "2 glasses of water" typed on the line counts too. Try it: each tap is a glass.</p></div>
       </div>
     </div>
 
     <div class="feats">
       <div class="feat"><svg aria-hidden="true"><use href="#i-share"/></svg><div><h3>Add to Calkey from any app</h3><p>Select a meal's words in another app, or share them, and they land on today's line, ready for you to send.</p></div></div>
-      <div class="feat"><svg aria-hidden="true"><use href="#i-drop"/></svg><div><h3>Water, from words</h3><p>Type "2 glasses of water" or "do glass pani" and it is logged as water, on the phone, with no signal needed.</p></div></div>
       <div class="feat"><svg aria-hidden="true"><use href="#i-week"/></svg><div><h3>Your week, reviewed</h3><p>On the first morning of each week: days logged, calories and protein a day. Share the week as a card that carries totals only.</p></div></div>
       <div class="feat"><svg aria-hidden="true"><use href="#i-target"/></svg><div><h3>Targets from your body and goal</h3><p>Calories, protein, carbs and fat worked out from your height, weight, activity and goal, and yours to change.</p></div></div>
       <div class="feat"><svg aria-hidden="true"><use href="#i-letters"/></svg><div><h3>Streaks that earn colours</h3><p>Keep logging and the app's colours unlock, one letter of CALKEY at a time. A colour you earn stays yours.</p></div></div>
-      <div class="feat"><svg aria-hidden="true"><use href="#i-partner"/></svg><div><h3>Share today with one person</h3><p>Pair with a one-time code. They see today's totals against the goal, never what you ate, and either of you can stop.</p></div></div>
-      <div class="feat"><svg aria-hidden="true"><use href="#i-bolt"/></svg><div><h3>Repeats log at once</h3><p>A meal you have had before comes from your own phone, in the same words or any order, with no wait.</p></div></div>
-      <div class="feat"><svg aria-hidden="true"><use href="#i-globe"/></svg><div><h3>The app speaks six languages</h3><p>English, Hindi, Portuguese, Spanish, Indonesian and German. Meals can be written in any language.</p></div></div>
     </div>
   </div>
 </section>
@@ -866,10 +863,10 @@ html.anim .step.on{opacity:1}
       <p class="lead">Private by default, and easy to leave.</p>
     </div>
     <div class="yours">
-      <div class="own"><i class="pen" aria-hidden="true"></i><h3>Your words stay out of analytics</h3><p>Usage statistics never carry what you typed, the names of foods or your figures, and you can switch them off in Settings.</p></div>
-      <div class="own"><i class="pen" aria-hidden="true"></i><h3>A partner sees totals only</h3><p>Calories against the goal, protein, carbs, fat, water and the streak. Never the meals or the words you typed.</p></div>
-      <div class="own"><i class="pen" aria-hidden="true"></i><h3>Your journal goes with you</h3><p>Backed up to your account from the first meal, and yours to export as a CSV whenever you like.</p></div>
-      <div class="own"><i class="pen" aria-hidden="true"></i><h3>Delete everything, any time</h3><p>From Settings in the app, or on the web at <a href="delete-account.html">calkey.app/delete-account</a>. Read the <a href="privacy.html">privacy policy</a>.</p></div>
+      <div class="own"><h3>Your words stay out of analytics</h3><p>Usage statistics never carry what you typed, the names of foods or your figures, and you can switch them off in Settings.</p></div>
+      <div class="own"><h3>Share today with one person</h3><p>Pair with a one-time code. They see calories against the goal, protein, carbs, fat, water and the streak, never the meals or the words you typed, and either of you can stop.</p></div>
+      <div class="own"><h3>Your journal goes with you</h3><p>Backed up to your account from the first meal, and yours to export as a CSV whenever you like.</p></div>
+      <div class="own"><h3>Delete everything, any time</h3><p>From Settings in the app, or on the web at <a href="delete-account.html">calkey.app/delete-account</a>. Read the <a href="privacy.html">privacy policy</a>.</p></div>
     </div>
     <p class="disclaim">Calkey gives estimates to help you track. It is not medical advice.</p>
   </div>
@@ -1007,11 +1004,11 @@ html.anim .step.on{opacity:1}
   // Words from lines people type, in the languages Calkey reads. The field is the
   // noise; the meal's own words are the signal.
   const FIELD = ["poha", "chai", "paneer tikka", "rajma chawal", "sweet lassi", "biryani", "दो रोटी", "पनीर की सब्ज़ी", "एक कटोरी दाल", "feijão", "concha", "arroz", "frango grelhado", "coxinha", "suco de laranja", "escumadeira", "nasi goreng", "centong", "telur", "pisang goreng", "es teh manis", "sate ayam", "lontong", "tacos de pollo", "frijoles", "arepa con queso", "café", "6 oz salmon", "1 cup cooked", "broccoli", "greek yogurt", "berries", "2 eggs", "toast", "latte", "oats", "a scoop of whey", "banana", "200 g", "1 glass", "half plate", "2 conchas", "1 centong", "phở bò", "cơm tấm", "حمص", "خبز", "pão na chapa", "bubur ayam", "1 taza", "chilaquiles", "tortillas", "brown rice", "almonds", "a cup of chai", "sprouts chaat", "un plato"];
-  let W = 0, H = 0, parts = [], flyers = [], targets = [], lineFont = "500 17px Inter";
+  let W = 0, H = 0, lanes = [], keep = [], flyBoxes = [], flyers = [], targets = [], lineFont = "500 17px Inter";
   let progress = -1, raf = 0, inView = true, t0 = 0;
   const pinned = () => root.classList.contains("pin");
   const tokStart = i => .05 + i * .026;
-  let quiet = null;
+  const meets = (a, q) => a.l < q.r && a.r > q.l && a.t < q.b && a.b > q.t;
 
   function rnd(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
   // The hero holds still only when it fits the screen; otherwise it plays once by itself.
@@ -1024,21 +1021,53 @@ html.anim .step.on{opacity:1}
     const r = pin.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1);
     W = r.width; H = r.height;
     for (const [c, x] of [[canvas, ctx], [fly, ctx2]]) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); x.setTransform(dpr, 0, 0, dpr, 0, 0); }
-    const R = rnd(7919), n = W > 960 ? 66 : 30, wide = W > 960;
-    parts = Array.from({ length: n }, (_, i) => {
-      const d = R();
-      return { t: FIELD[i % FIELD.length], x: R(), y: .04 + R() * .92, d, ph: R() * 6.28, sp: .6 + R() * .8, size: Math.round(12 + d * 13) };
-    });
+    const R = rnd(7919), wide = W > 960;
+    // What the noise must never cross: the headline, the lede, the buttons, the fine line, the card.
+    const box = el => { const b = el.getBoundingClientRect(); return { l: b.left - r.left - 24, t: b.top - r.top - 24, r: b.right - r.left + 24, b: b.bottom - r.top + 24 }; };
+    keep = [".nav", ".hero h1", ".hero .lead", ".hero .actions", ".hero .fine", ".jcard", ".scroll-hint"].map(q => $(q)).filter(e => e && e.getClientRects().length && e.offsetWidth).map(box);
+    // The noise drifts in lanes: one speed per lane, words spaced along it, so no two ever meet.
+    // On a phone it keeps to the band above the headline.
+    const navB = $(".nav").getBoundingClientRect().bottom - r.top;
+    const top = wide ? H * .03 : Math.max(0, navB), bottom = wide ? H * .97 : $(".hero h1").getBoundingClientRect().top - r.top - 24;
+    const gap = wide ? 46 : 38;
+    lanes = [];
+    let k = 0;
+    for (let y = top + gap / 2; y <= bottom - gap / 2; y += gap) {
+      const d = R(), size = Math.round(12 + d * (wide ? 13 : 8)), sp = .6 + R() * .8, ph = R() * 6.28, wrap = W + 260;
+      const font = `${d > .6 ? 500 : 400} ${size}px Inter, system-ui, sans-serif`;
+      ctx.font = font;
+      const words = [];
+      for (let x = R() * 240; ;) {
+        const t = FIELD[k++ % FIELD.length], w = ctx.measureText(t).width;
+        if (x + w > wrap - 90) break;
+        words.push({ t, x, w });
+        x += w + 140 + R() * 320;
+      }
+      lanes.push({ y, d, size, sp, ph, wrap, words, font, color: d > .86 ? "#45D0D4" : "#EDF3F1" });
+    }
     // where each word of the meal will sit once it is typed
     const cs = getComputedStyle(jline);
     lineFont = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
     const lineSize = parseFloat(cs.fontSize);
     targets = toks.map(t => { const b = t.getBoundingClientRect(); return { x: b.left - r.left, y: b.top - r.top + b.height / 2, size: lineSize }; });
     const R2 = rnd(104729), card = $(".jcard").getBoundingClientRect(), capr = cap.getBoundingClientRect(), lineR = jline.getBoundingClientRect();
-    flyers = toks.map(t => wide
-      ? { t: t.textContent, x: (.5 + R2() * .4) * W, y: (.14 + R2() * .3) * H, size: 18 + Math.round(R2() * 8), ph: R2() * 6.28 }
-      : { t: t.textContent, size: 16, ph: R2() * 6.28 });
-    if (!wide) {
+    flyers = toks.map(t => ({ t: t.textContent, size: wide ? 18 + Math.round(R2() * 8) : 16, ph: R2() * 6.28 }));
+    flyBoxes = [];
+    if (wide) {
+      // The meal's words start in clear space: off the copy and the card, and apart from each other.
+      for (const f of flyers) {
+        ctx2.font = lineFont.replace(/[\d.]+px/, f.size + "px");
+        const w = ctx2.measureText(f.t).width;
+        let pick = null;
+        for (let a = 0; a < 80; a++) {
+          const x = (.4 + R2() * .5) * W, y = (.1 + R2() * .42) * H;
+          const b = { l: x - 20, t: y - f.size / 2 - 20, r: x + w + 20, b: y + f.size / 2 + 20 };
+          pick = { x, y, b };
+          if (!keep.some(q => meets(b, q)) && !flyBoxes.some(q => meets(b, q))) break;
+        }
+        f.x = pick.x; f.y = pick.y; flyBoxes.push(pick.b);
+      }
+    } else {
       // On a phone the words lie jumbled on the empty page, then put themselves in order.
       const order = flyers.map((_, i) => i).sort(() => R2() - .5);
       let x = card.left - r.left + 20, y = lineR.bottom - r.top + 34;
@@ -1051,22 +1080,28 @@ html.anim .step.on{opacity:1}
         x += w + 16 + R2() * 18;
       }
     }
-    const cr = $(".hero-copy").getBoundingClientRect();
-    quiet = { l: cr.left - r.left - 24, t: cr.top - r.top - 24, r: cr.right - r.left + 24, b: cr.bottom - r.top + 24 };
   }
   function drawField(time) {
     ctx.clearRect(0, 0, W, H);
     const p = Math.max(0, progress), fade = 1 - .84 * ease(span(p, .02, .5));
     ctx.textBaseline = "middle";
-    for (const q of parts) {
-      const tt = time * .00006 * q.sp, wrap = W + 260;
-      let x = ((q.x * wrap - tt * 60 * (.4 + q.d)) % wrap + wrap) % wrap - 130;
-      const y = q.y * H + Math.sin(tt * 9 + q.ph) * (10 + q.d * 18);
-      const hush = quiet && x > quiet.l - 40 && x < quiet.r && y > quiet.t && y < quiet.b ? .18 : 1;
-      ctx.globalAlpha = (.06 + q.d * .2) * fade * hush;
-      ctx.fillStyle = q.d > .86 ? "#45D0D4" : "#EDF3F1";
-      ctx.font = `${q.d > .6 ? 500 : 400} ${q.size}px Inter, system-ui, sans-serif`;
-      ctx.fillText(q.t, x, y);
+    const avoid = p < .44 ? keep.concat(flyBoxes) : keep;
+    for (const L of lanes) {
+      const tt = time * .00006 * L.sp, y = L.y + Math.sin(tt * 9 + L.ph) * 5, base = (.06 + L.d * .2) * fade;
+      ctx.font = L.font; ctx.fillStyle = L.color;
+      for (const q of L.words) {
+        const x = ((q.x - tt * 60 * (.4 + L.d)) % L.wrap + L.wrap) % L.wrap - 130;
+        // fade out as a word nears anything it must not cross
+        let m = 1;
+        for (const a of avoid) {
+          const dx = Math.max(a.l - (x + q.w), x - a.r, 0), dy = Math.max(a.t - (y + L.size / 2), y - L.size / 2 - a.b, 0);
+          m = Math.min(m, Math.hypot(dx, dy) / 40);
+          if (m <= 0) break;
+        }
+        if (m <= 0) continue;
+        ctx.globalAlpha = base * m;
+        ctx.fillText(q.t, x, y);
+      }
     }
     // the meal's own words: bright in the field, then flying into the line, above the card
     ctx2.clearRect(0, 0, W, H);
@@ -1172,8 +1207,7 @@ html.anim .step.on{opacity:1}
   ];
   const bars = $("[data-bars]"), readout = $("[data-readout]"), rswap = $("[data-rswap]"), rlang = $("[data-rlang]"), rline = $("[data-rline]"), ritems = $("[data-ritems]"), rtotal = $("[data-rtotal]"), rmacro = $("[data-rmacro]");
   const kcal = m => m.items.reduce((a, it) => a + it[2], 0);
-  const maxK = Math.max(...MEALS.map(kcal));
-  bars.innerHTML = MEALS.map((m, i) => `<button class="bar" type="button" role="tab" id="lt${i}" aria-controls="lang-panel" aria-selected="false" tabindex="-1" data-i="${i}"><span class="bar-stack" aria-hidden="true"><span class="bar-k">${kcal(m)}</span><span class="bar-col" style="--h:${(kcal(m) / maxK).toFixed(3)}"></span></span><span class="bar-l" aria-hidden="true"${m.code === "hi" ? ' lang="hi"' : ""}>${m.lang}</span><span class="vh">${m.name || m.lang}, ${kcal(m)} calories</span></button>`).join("");
+  bars.innerHTML = MEALS.map((m, i) => `<button class="bar" type="button" role="tab" id="lt${i}" aria-controls="lang-panel" aria-selected="false" tabindex="-1" data-i="${i}"><span class="bar-stack" aria-hidden="true"><span class="bar-k">${kcal(m)}</span><span class="bar-col"></span></span><span class="bar-l" aria-hidden="true"${m.code === "hi" ? ' lang="hi"' : ""}>${m.lang}</span><span class="vh">${m.name || m.lang}, ${kcal(m)} calories</span></button>`).join("");
   const barEls = $$(".bar", bars);
   let cur = -1, tween = 0;
   function pick(i, instant) {
@@ -1359,7 +1393,12 @@ html.anim .step.on{opacity:1}
   ww.style.setProperty("--lvl", level(ml));
 
   /* ------------------------------------------------ marquee and the closing line */
-  const mq = $("[data-marq]"); mq.innerHTML += mq.innerHTML.replace(/<span/g, '<span aria-hidden="true"');
+  const mq = $("[data-marq]");
+  if (anim) {
+    // the loop needs a second copy; it is hidden from screen readers, and a tap or hover holds it still
+    mq.innerHTML += mq.innerHTML.replace(/<span/g, '<span aria-hidden="true"');
+    mq.parentElement.addEventListener("click", () => mq.parentElement.classList.toggle("held"));
+  }
   let cd = "";
   for (let x = 0; x <= 1440; x += 6) cd += (x ? "L" : "M") + x + " " + (60 + Math.sin(x / 30) * 26 * Math.pow(clamp(1 - x / 900), 1.5)).toFixed(1);
   $("[data-ctaline]").setAttribute("d", cd);
