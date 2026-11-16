@@ -178,10 +178,10 @@
   <p class="kick">Privacy policy</p>
   <h1>Your journal is <em>yours</em>.</h1>
   <p class="lede">What Calkey collects, why, where it goes, and what it never does. Written to be read, not skimmed past.</p>
-  <div class="meta"><span>Calkey — AI calorie tracker</span><span>Last updated 16 November 2026</span><span>Published by Interludeapps</span></div>
+  <div class="meta"><span>Calkey — AI calorie tracker</span><span>Last updated 17 November 2026</span><span>Published by Interludeapps</span></div>
 
   <div class="glance" aria-label="At a glance">
-    <div class="g"><svg aria-hidden="true"><use href="#i-tag"/></svg><b>Never sold</b><span>We do not sell your data, and we do not share it for advertising.</span></div>
+    <div class="g"><svg aria-hidden="true"><use href="#i-tag"/></svg><b>Never sold</b><span>We do not sell your data. To measure our own ads, Google gets a few app steps, never your meals.</span></div>
     <div class="g"><svg aria-hidden="true"><use href="#i-note"/></svg><b>Meal text stays out of our logs</b><span>Not in our technical logs, our food backlog or our correction tallies.</span></div>
     <div class="g"><svg aria-hidden="true"><use href="#i-partner"/></svg><b>A partner sees totals</b><span>Only if you pair, and only your daily totals. Never what you ate.</span></div>
     <div class="g"><svg aria-hidden="true"><use href="#i-trash"/></svg><b>Delete your account</b><span>Your account and your journal, in the app or on the web.</span></div>
@@ -297,13 +297,34 @@
           random identifier</div>
         </div>
         <div class="row">
+          <div><span class="k">Data</span>Ad measurement: four app steps, that the app was opened for the first
+          time, that setup was finished, that a meal was logged (not what or how
+          much) and that a free trial started; and, reported by Google Play
+          itself, that a subscription was bought and its price. With them, a random
+          identifier for this install, the app version, phone model, Android
+          version, language and country. Not your advertising ID. <strong>Never
+          your meal text, food names, calorie figures, goals, weight, name or
+          email</strong></div>
+          <div><span class="k">Why</span>To learn which of our own ads bring people who go on to use Calkey,
+          so we spend only on the ones that work</div>
+          <div><span class="k">Where it goes</span>Google's Firebase Analytics and, from there, Google Ads, which
+          counts these steps against Calkey's own ad campaigns. Not used to show
+          you personalised ads. On unless you turn off "Share usage statistics" in
+          Settings › Data &amp; privacy; signing out starts a new random
+          identifier</div>
+        </div>
+        <div class="row">
           <div><span class="k">Data</span>Your subscription status: when your free day started, your plan,
           whether it is in a trial, renewing or ended, its expiry date, and the
-          purchase reference Google Play gives us</div>
+          purchase reference Google Play gives us; and a record of each trial,
+          charge, renewal, cancellation and refund (plan, price, currency,
+          country, dates)</div>
           <div><span class="k">Why</span>To unlock the app for the time you have paid for, and to check with
           Google Play that a purchase is real</div>
           <div><span class="k">Where it goes</span>Our database, linked to your account. We never see your card or
-          payment details; Google Play handles the payment</div>
+          payment details; Google Play handles the payment. The record of charges
+          and refunds is our financial record: when you delete your account it is
+          kept, without any link to you</div>
         </div>
         <div class="row">
           <div><span class="k">Data</span>A notification token for your phone, your phone's time zone, language
@@ -351,7 +372,9 @@
     <section id="not">
       <h2><span class="n">03</span>What we do not do</h2>
       <ul class="nots">
-        <li>We do not sell your data, and we do not share it for advertising.</li>
+        <li>We do not sell your data, and we do not share it for anyone else's
+        advertising. The only advertising use is measuring our own ads, with the
+        few app steps described above.</li>
         <li>We do not build a profile of you for anyone else. The only person who
         can see any of your figures is a partner you chose to pair with, and only
         your daily totals.</li>
@@ -440,7 +463,8 @@
         your meal text, Google Play, which takes subscription payments and
         tells us whether a subscription is active, Firebase Cloud Messaging,
         which delivers notifications to your phone, Firebase Crashlytics, which
-        receives crash reports, Play Integrity, which checks that the copy of
+        receives crash reports, Firebase Analytics and Google Ads, which receive
+        the ad-measurement steps described above, Play Integrity, which checks that the copy of
         Calkey talking to our server came from Google Play, and Health Connect on
         your phone, if you switch it on, for water only.</li>
         <li><strong>Supabase</strong>The database and server that hold your
@@ -465,7 +489,9 @@
     <section id="keep">
       <h2><span class="n">08</span>How long we keep it</h2>
       <p>Your journal, goals, partner link and subscription status are kept until you
-      delete them or delete your account, and are removed with it. Our per-request
+      delete them or delete your account, and are removed with it. The record of
+      subscription charges and refunds is kept as our financial record, without
+      any link to you once your account is deleted. Our per-request
       technical records (when a meal was parsed, how long it took, whether it
       failed; never the meal text) lose any link to you when your account is
       deleted. Messages you send us from the app are deleted from our database
